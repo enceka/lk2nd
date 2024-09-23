@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: BSD-3-Clause
+
+#include <skeleton64.dtsi>
+#include <lk2nd.dtsi>
+
+/{
+        qcom,msm-id = <207 0x20001>; //207 0x0/0x10000/0x20000
+        qcom,board-id = <8 0>;
+        qcom,pmic-id = <0x10009 0x1000A 0x0 0x0>;
+};
+
+&lk2nd {
+        xiaomi_leo {
+                model = "Xiaomi Mi Note Pro";
+                compatible = "xiaomi,leo";
+                lk2nd,dtb-files = "msm8994-xiaomi-leo";
+
+           /*     panel {
+                compatible = "xiaomi,leo-panel", "lk2nd,panel";
+
+                qcom,mdss_dsi_sharp_fbc20_wqhd {
+                        compatible = "mdss,sharp-fbc20";
+                        };
+                }; */
+        };
+};
